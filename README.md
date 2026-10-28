@@ -49,7 +49,9 @@
 
 ### 直接运行
 
-从 [Releases](../../releases) 下载 `NeonCorridor.exe`，双击即可，无需安装任何东西。
+从 **[Releases](https://github.com/MUZHUYIN/neon-corridor/releases/latest)** 下载 `NeonCorridor.exe`，双击即可游玩，无需安装任何东西。
+
+> 单文件 exe（约 127 MB），已内嵌全部资源与引擎运行时。
 
 ### 从源码运行
 
