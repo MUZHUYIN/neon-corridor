@@ -1,0 +1,18 @@
+# 二进制资源：不做任何文本转换，也不产生逐行 diff
+*.png   binary
+*.ico   binary
+*.wav   binary
+*.ttf   binary
+
+# 脚本与配置：明确用 LF，方便以后跨平台
+*.gd    text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.ps1   text eol=lf
+*.json  text eol=lf
+*.cfg   text eol=lf
+*.godot text eol=lf
+*.gdignore text eol=lf
+
+# 存档/日志类：永不入库（双保险，.gitignore 也覆盖了）
+*.log   text eol=lf

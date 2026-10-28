@@ -1,0 +1,50 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+
+config/name="NeonCorridor"
+config/description="霓虹回廊 - 像素风生存射击 Roguelite"
+run/main_scene="res://src/Main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+boot_splash/show_image=false
+
+[autoload]
+
+Bus="*res://src/autoload/Bus.gd"
+Art="*res://src/autoload/Art.gd"
+UI="*res://src/autoload/UI.gd"
+Save="*res://src/autoload/Save.gd"
+DB="*res://src/autoload/DB.gd"
+Audio="*res://src/autoload/Audio.gd"
+Game="*res://src/autoload/Game.gd"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+window/vsync/vsync_mode=1
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=false
+
+[physics]
+
+common/physics_ticks_per_second=60
+2d/default_gravity=0.0
+
+[rendering]
+
+; 2D 像素游戏用不上 Vulkan。改成 OpenGL 兼容模式后，
+; 老显卡 / 部分核显 / 虚拟机 / Windows 7 也能跑，对画面没有损失。
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+anti_aliasing/quality/msaa_2d=0
+environment/defaults/default_clear_color=Color(0.031, 0.031, 0.059, 1)

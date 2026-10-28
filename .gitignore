@@ -1,0 +1,42 @@
+# ============================================================
+# 《霓虹回廊》 .gitignore
+# 入库原则：只提交「构建和运行必需」的文件。
+# 排除 Godot 缓存、构建产物、分发包、以及可由脚本重建的临时文件。
+# ============================================================
+
+# ---- Godot 引擎缓存与导入产物（可由引擎重建） ----
+.godot/
+*.translation
+
+# ---- 构建与分发产物（由 export_presets.cfg / tools/build.ps1 重新生成） ----
+build/
+dist/
+*.pck
+*.exe
+*.tmp
+
+# ---- 操作系统 / 编辑器杂项 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# ---- Python（工具脚本运行产物） ----
+__pycache__/
+*.pyc
+.venv/
+
+# ---- 自检截图（--shots 自动生成，属于开发产物） ----
+# README 用的图放在 docs/screenshots/，那几张是精选后入库的。
+tests/shots/*.png
+tests/shots/*.import
+tests/*.log
+tests/*.tmp
+
+# ---- 开发用美术预览图（tools/contact.py 可随时重建） ----
+assets/art/_c_*.png
+assets/art/_contact.png
+
+# ---- 未导出的兜底字体（NotoSansSC 始终存在，不需要） ----
+assets/fonts/simhei.ttf
